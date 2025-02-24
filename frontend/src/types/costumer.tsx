@@ -9,6 +9,14 @@ export interface Costumer {
   updatedAt: Date;
 }
 
+export interface AddCostumer {
+  name: string;
+  phone: string;
+  birth: string;
+  email: string;
+  address: string;
+}
+
 export interface CostumerResponse {
   data: Costumer[];
   page: string | number;

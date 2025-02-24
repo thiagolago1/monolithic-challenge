@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/eslint-plugin-query": "^5.66.1",
+    "@tanstack/react-query": "^5.66.9",
+    "@tanstack/react-query-devtools": "^5.66.9",
     "axios": "^1.7.9",
     "next": "15.1.7",
     "react": "^19.0.0",

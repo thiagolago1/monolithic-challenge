@@ -2,7 +2,7 @@
 
 ### Follow step by step to execute the project
 
-### install backend dependencys
+### Install backend dependencys
 ```
 cd path/to/project/backend
 npm install
@@ -26,26 +26,29 @@ cd path/to/project/backend
 npx prisma migrate deploy
 ```
 
-### If you want to see the database on prisma studio
-```
-npx prisma studio
-```
-
-#### If you want to view another client's database, just ensure the database settings based on docker-compose.yml file
-
-### run backend
+### Run backend
 ```
 cd path/to/project/backend
 npm run start:dev
 ```
 
-### install frontend dependencys
+### If you want to see the database on prisma studio
+```
+cd path/to/project/backend
+npx prisma studio
+```
+
+#### If you want to view another client's database, just ensure the database settings based on docker-compose.yml file
+
+### Install frontend dependencys
 ```
 cd path/to/project/frontend
 npm install
 ```
 
-### run frontend
+#### Create .env file on frontend based on .env.example
+
+### Run frontend
 ```
 cd path/to/project/frontend
 npm run dev

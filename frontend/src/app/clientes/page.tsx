@@ -126,7 +126,7 @@ export default function ClientesPage() {
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse">
+          <table className="w-full min-h-[150px] border-collapse">
             <thead>
               <tr className="bg-zinc-800">
                 <th className="p-2">

@@ -8,7 +8,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 h-screen bg-white border-r border-gray-200 flex flex-col justify-between">
+    <aside className="w-64 h-full min-h-screen bg-white border-r border-gray-200 flex flex-col justify-between">
 
       <div>
         <div className="flex justify-center py-6">

@@ -1,6 +1,6 @@
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
-import { CostumerResponse } from "../types/costumer";
-import { getAllCostumersByFilter } from "../services/costumerServices";
+import { Costumer, CostumerResponse } from "../types/costumer";
+import { getAllCostumersByFilter, getCostumerById } from "../services/costumerServices";
 
 export const useCostumersByFilter = (
   filters: any
@@ -8,5 +8,14 @@ export const useCostumersByFilter = (
   return useQuery({
     queryKey: ["concursos-by-filter", filters],
     queryFn: () => getAllCostumersByFilter(filters),
+  });
+};
+
+export const useCostumersById = (
+  idCostumer: string
+): UseQueryResult<Costumer, Error> => {
+  return useQuery({
+    queryKey: ["concursos-by-id", idCostumer],
+    queryFn: () => getCostumerById(idCostumer),
   });
 };

@@ -18,7 +18,7 @@ export default function ClientesPage() {
   const [selected, setSelected] = useState<string[]>([]);
   const [menuOpen, setMenuOpen] = useState<string | null>(null);
   const [dataGridFilters, setDataGridFilters] = useState({
-    limit: 10,
+    limit: 5,
     page: 1,
     search: "",
   });
@@ -197,7 +197,7 @@ export default function ClientesPage() {
               Anterior
             </button>
             <span className="text-gray-400">
-              Página {dataGridFilters.page} de {totalPages}
+              Página {dataGridFilters.page} de {totalPages} - Total Items: ({totalItems})
             </span>
             <button
               className="bg-zinc-700 px-4 py-2 rounded-lg text-gray-400 disabled:opacity-50"

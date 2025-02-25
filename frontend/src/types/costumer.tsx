@@ -17,6 +17,14 @@ export interface AddCostumer {
   address: string;
 }
 
+export interface UpdateCostumer {
+  name: string;
+  phone: string;
+  birth: string;
+  email: string;
+  address: string;
+}
+
 export interface CostumerResponse {
   data: Costumer[];
   page: string | number;

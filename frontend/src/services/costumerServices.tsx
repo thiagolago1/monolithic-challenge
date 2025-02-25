@@ -1,5 +1,5 @@
 import axios from "axios";
-import { AddCostumer, Costumer, CostumerResponse } from "../types/costumer";
+import { AddCostumer, Costumer, CostumerResponse, UpdateCostumer } from "../types/costumer";
 import { formatQueryParams } from "../utils/queryFilter";
 
 const baseUrl = process.env.NEXT_PUBLIC_APP_API + 'api/';
@@ -22,6 +22,19 @@ export async function deleteSelectedCostumers(
 
 export async function postAddCostumer(body: AddCostumer): Promise<void> {
   return await axios.post<void>(baseUrl + `costumer`, body, {
+    headers: { "Content-Type": "application/json" },
+  }).then((res) => res.data);
+}
+
+export async function getCostumerById(idCostumer: string): Promise<any> {
+  const url = baseUrl + `costumer/${idCostumer}`;
+
+  return (await axios.get(url)).data;
+}
+
+export async function putUpdateCostumer(body: UpdateCostumer, id: string): Promise<Costumer> {
+  const url = baseUrl + `costumer/${id}`
+  return await axios.put(url, body, {
     headers: { "Content-Type": "application/json" },
   }).then((res) => res.data);
 }
